@@ -1,8 +1,10 @@
 <template>
-  <div class="h5-wrapper">
+  <div id='app'>
+    <div class="h5-wrapper">
     <keep-alive :include="keepArr">
       <router-view></router-view>
     </keep-alive>
+    </div>
   </div>
 </template>
 
@@ -14,20 +16,7 @@
   }
 </script>
 
-<script>
-    import Vue from 'vue'
-import App from './App.vue'
-import router from '@/router/index'
-import store from '@/store/index'
-
-Vue.config.productionTip = false
-
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
-</script>
+<script src='src/main.js'></script>
 
 <style>
 body{
